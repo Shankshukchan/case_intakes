@@ -133,7 +133,7 @@ export function CaseDetailPage() {
 
           {caseData.notes && (
             <div className="mt-6 pt-6 border-t">
-              <p className="text-sm font-medium mb-2">Notes</p>
+              <p className="text-sm font-medium mb-2">Note's</p>
               <p className="text-sm text-muted-foreground whitespace-pre-wrap">
                 {caseData.notes}
               </p>
