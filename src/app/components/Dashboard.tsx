@@ -2,7 +2,13 @@
 
 import { useDashboard } from "../hooks/useDashboard";
 import { useNavigate } from "react-router";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 import { Button } from "./ui/button";
 import { Skeleton } from "./ui/skeleton";
 import { Scale, Calendar, ListTodo, CheckCircle2, Plus } from "lucide-react";
@@ -20,7 +26,7 @@ export function Dashboard() {
             Overview of case intake and hearing readiness
           </p>
         </div>
-        
+
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[1, 2, 3, 4].map((i) => (
             <Card key={i}>
@@ -105,7 +111,8 @@ export function Dashboard() {
           <CardHeader>
             <CardTitle>Get Started</CardTitle>
             <CardDescription>
-              No cases in the system yet. Create your first case to begin tracking legal operations.
+              No cases in the system yet. Create your first case to begin
+              tracking legal operations.
             </CardDescription>
           </CardHeader>
           <CardContent>

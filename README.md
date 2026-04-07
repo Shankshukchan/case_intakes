@@ -12,7 +12,10 @@ A full-stack legal operations management system for tracking case intake and hea
 
 **Watch the application in action:**
 
-[Screencast From 2026-04-07 12-51-19.webm](Screencast%20From%202026-04-07%2012-51-19.webm)
+<video width="100%" controls>
+  <source src="Screencast From 2026-04-07 12-51-19.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
 
 ## ✨ Features Implemented
 

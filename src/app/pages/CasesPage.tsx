@@ -15,18 +15,25 @@ import { Case } from "../types";
 
 export function CasesPage() {
   const [filters, setFilters] = useState<CaseFilters>({});
-  const { cases, loading, createCase, updateCase, deleteCase } = useCases(filters, false);
+  const { cases, loading, createCase, updateCase, deleteCase } = useCases(
+    filters,
+    false,
+  );
   const { isAdmin } = useUser();
-  
+
   const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false);
   const [editingCase, setEditingCase] = useState<Case | null>(null);
 
-  const handleCreate = async (data: Omit<Case, "id" | "createdAt" | "updatedAt">) => {
+  const handleCreate = async (
+    data: Omit<Case, "id" | "createdAt" | "updatedAt">,
+  ) => {
     await createCase(data);
     setIsCreateDialogOpen(false);
   };
 
-  const handleEdit = async (data: Omit<Case, "id" | "createdAt" | "updatedAt">) => {
+  const handleEdit = async (
+    data: Omit<Case, "id" | "createdAt" | "updatedAt">,
+  ) => {
     if (editingCase) {
       await updateCase(editingCase.id, data);
       setEditingCase(null);
@@ -63,7 +70,7 @@ export function CasesPage() {
             Manage case intake records and track case progression
           </p>
         </div>
-        
+
         <Dialog open={isCreateDialogOpen} onOpenChange={setIsCreateDialogOpen}>
           <DialogTrigger asChild>
             <Button>
@@ -72,7 +79,10 @@ export function CasesPage() {
             </Button>
           </DialogTrigger>
           <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-            <CaseForm onSubmit={handleCreate} onCancel={() => setIsCreateDialogOpen(false)} />
+            <CaseForm
+              onSubmit={handleCreate}
+              onCancel={() => setIsCreateDialogOpen(false)}
+            />
           </DialogContent>
         </Dialog>
       </div>
@@ -81,8 +91,8 @@ export function CasesPage() {
       <CaseFiltersComponent onFiltersChange={setFilters} />
 
       {/* Cases List */}
-      <CaseList 
-        cases={cases} 
+      <CaseList
+        cases={cases}
         onEdit={setEditingCase}
         onDelete={handleDelete}
         isAdmin={isAdmin}
