@@ -8,6 +8,12 @@ A full-stack legal operations management system for tracking case intake and hea
 **Timebox:** 2-3 days (12-18 hours)  
 **Tech Stack:** React + TypeScript + Node.js + Express + MongoDB
 
+## 📹 Demo Screencast
+
+**Watch the application in action:**
+
+[Screencast From 2026-04-07 12-51-19.webm](Screencast%20From%202026-04-07%2012-51-19.webm)
+
 ## ✨ Features Implemented
 
 ### ✅ Feature A: Case Intake CRUD

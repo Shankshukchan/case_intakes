@@ -15,7 +15,7 @@ import { Case } from "../types";
 
 export function CasesPage() {
   const [filters, setFilters] = useState<CaseFilters>({});
-  const { cases, loading, createCase, updateCase, deleteCase } = useCases(filters);
+  const { cases, loading, createCase, updateCase, deleteCase } = useCases(filters, false);
   const { isAdmin } = useUser();
   
   const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false);

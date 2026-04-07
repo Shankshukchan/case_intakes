@@ -8,7 +8,7 @@ import { Skeleton } from "./ui/skeleton";
 import { Scale, Calendar, ListTodo, CheckCircle2, Plus } from "lucide-react";
 
 export function Dashboard() {
-  const { metrics, loading } = useDashboard();
+  const { metrics, loading } = useDashboard(false);
   const navigate = useNavigate();
 
   if (loading) {
